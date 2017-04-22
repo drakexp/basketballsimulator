@@ -13,21 +13,21 @@ public class Main{
    static Hashtable<String, Team> teams = new Hashtable<String, Team>();
    static NameRandomizer nameRandomizer;
    public static void main(String[] args){
-      for(int i = 0; i < 100; i++) {
-         int centerHts[] = {6,6,6,6,6,6,7};
-         int rnd = new Random().nextInt(centerHts.length);
-         System.out.println(centerHts[rnd]);
-         int feet = centerHts[rnd];
-         if(feet == 7) {
-            int centerInches[] = {0,0,0,1,1,2};
-            rnd = new Random().nextInt(centerInches.length);
-            int inches = centerInches[rnd];
-            System.out.println(inches);
-         }
-
-      }
-//      createGenericTeams();
-//      randomizePlayers();
+//      for(int i = 0; i < 100; i++) {
+//         int centerHts[] = {6,6,6,6,6,6,7};
+//         int rnd = new Random().nextInt(centerHts.length);
+//         System.out.println(centerHts[rnd]);
+//         int feet = centerHts[rnd];
+//         if(feet == 7) {
+//            int centerInches[] = {0,0,0,1,1,2};
+//            rnd = new Random().nextInt(centerInches.length);
+//            int inches = centerInches[rnd];
+//            System.out.println(inches);
+//         }
+//
+//      }
+      createGenericTeams();
+      randomizePlayers();
    }
    
    public static void createGenericTeams(){
@@ -45,7 +45,7 @@ public class Main{
       Set<String> keys = teams.keySet();
       nameRandomizer = new NameRandomizer();
       for(String key: keys){
-         while(!teams.get(key).fullTeam()) {
+         while(!teams.get(key).fullTeam()) {;
             Player player = new Player(nameRandomizer.getRandomName(), teams.get(key));
             teams.get(key).insertPlayer(player);
          }

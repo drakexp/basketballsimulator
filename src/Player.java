@@ -53,7 +53,6 @@ public class Player {
       calendar.set(Calendar.DAY_OF_YEAR, dayOfYear);
       birthdate = calendar.getTime();
       int possibleYears = cal.get(Calendar.YEAR) - 18 - year;
-      System.out.println("Possible: " + possibleYears);
       if(possibleYears > 0) {
          double rand = Math.random();
          rand = Math.sqrt(rand);
@@ -71,7 +70,7 @@ public class Player {
    }
    
    public String getPlayerInfo() {
-      return name + ", " + position + ", " + yrsinLeague + ", " + dateFormat.format(birthdate) + ", " + salary;
+      return name + ", " + team.getTeam() + ", " + position + ", " + yrsinLeague + ", " + dateFormat.format(birthdate) + ", " + salary;
    }
    
    private void randomizeStats() {

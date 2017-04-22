@@ -4,10 +4,10 @@ import java.util.ArrayList;
 public class Team {
    private String teamName;
    private int currentSalary = 0;
-   private int maxSalary = 94143000;
-   private final int maxPlayers = 15;
-   private final int minPlayers = 13;
-   private static ArrayList<Player> players = new ArrayList<Player>();
+   private static int maxSalary = 94143000;
+   private final static int maxPlayers = 15;
+   private final static int minPlayers = 13;
+   private ArrayList<Player> players = new ArrayList<Player>();
    
    public Team(String name) {
       teamName = name;
@@ -22,7 +22,7 @@ public class Team {
    }
    
    public boolean fullTeam() {
-      if(players.size() == maxPlayers)
+      if(players.size() >= maxPlayers)
          return true;
       else
          return false;
