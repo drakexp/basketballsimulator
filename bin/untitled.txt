@@ -1,0 +1,20 @@
+   private int overall;
+   private int strength;
+   private int speed;
+   private Hashtable<String, Integer> height
+   = new Hashtable<String, Integer>();
+   private int drvlayup;
+   private int stdlayup;
+   private int drvdunk;
+   private int stddunk;
+   private int closhot;
+   private int midshot;
+   private int thrshot;
+   private int post;
+   private int pass;
+   private int iq;
+   private int dribbling;
+   private int offrebound;
+   private int defrebound;
+   private int block;
+   private int steal;

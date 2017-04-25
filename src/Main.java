@@ -13,19 +13,7 @@ public class Main{
    static Hashtable<String, Team> teams = new Hashtable<String, Team>();
    static NameRandomizer nameRandomizer;
    public static void main(String[] args){
-//      for(int i = 0; i < 100; i++) {
-//         int centerHts[] = {6,6,6,6,6,6,7};
-//         int rnd = new Random().nextInt(centerHts.length);
-//         System.out.println(centerHts[rnd]);
-//         int feet = centerHts[rnd];
-//         if(feet == 7) {
-//            int centerInches[] = {0,0,0,1,1,2};
-//            rnd = new Random().nextInt(centerInches.length);
-//            int inches = centerInches[rnd];
-//            System.out.println(inches);
-//         }
-//
-//      }
+
       createGenericTeams();
       randomizePlayers();
    }
@@ -54,7 +42,8 @@ public class Main{
          ArrayList<Player> players = teams.get(key).allPlayers();
          Iterator<Player> foreach = players.iterator();
          while(foreach.hasNext()){
-            System.out.println(foreach.next().getPlayerInfo());
+//            System.out.println(foreach.next().getPlayerInfo());
+            System.out.println(foreach.next().getPlayerStats());
          }
       }
    }
